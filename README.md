@@ -74,6 +74,7 @@ for(i=5;i<12;i=++){
    jeu-> plateau[i][j]=0;
    }
 }
+//fonction presente les differentes choix de deplecement des pions
 void deplacement_pions (bulltricker*jeu,deplacement*d)
 int j,i=3;
 jeu->plateau[d->case_i.lig][d->case_i.col]=jeu->plateau[i][j]
@@ -87,3 +88,24 @@ for(i=3;i<=14;i++){
 
 
 }
+//fonction presente des differentes choix de deplecement des deux roix
+void deplacement_roi(bulltricker*jeu,deplacement*d){
+    case*c;
+    int choix;
+    int i,j;
+    i=j=1;
+    jeu->plateau[d->case_i.lig][d->case_i.col]=jeu->plateau[i][j];
+    while(jeu->plateau[d->case_i.lig][d->case_i.col]=4&& i<=14){
+                switch(choix){
+            case 1:
+               jeu->plateau[d->case_f.lig][d->case_f.col] =jeu->plateau[i][j-2];
+
+            case 2:
+               jeu->plateau[d->case_f.lig][d->case_f.col] =jeu->plateau[i][j+2];
+            case 3:
+                jeu->plateau[d->case_f.lig][d->case_f.col] =jeu->plateau[i+2][j];
+            case 4:
+                jeu->plateau[d->case_f.lig][d->case_f.col] =jeu->plateau[i-2][j];
+                }
+            }
+        }
